@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Romântica</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>UM PRESENTE PARA O MEU AMOR :)</h1>
+        </div>
+
+        <div class="interactive-section">
+            <p>clica no botãozinho rsrs</p>
+            <button id="toggleButton">abrir surpresinha</button>
+            <div class="hidden-content" id="hiddenContent">
+                <div class="heart-animation-container"> <!-- Contêiner para os corações -->
+                    <p class="animated-text">meu bem, voce tem sido a coisa mais importante da minha vida, passar meu dia com voce faz dele um dia menos cansativo, voce me diverte, me faz ser uma pessoa menos amargurada, menos infeliz, voce tem aliviado minha tristeza todos os dias simplesmente por ser voce, sou muito grata por te ter na minha vida, muito obrigada por todas as risadas, os momentos de raiva, de melancolia e principalmente, obrigada pelos momentos de carinho, voce é o meu gatinho, meu pretinho, meu macaquinho, meu amorzinho, eu te amo mais que tudo, meu bem.</p>
+                </div>
+                <h2>meus melhores momentos são com você :)</h2>
+                <div class="photo-grid">
+                    <div class="photo-card">
+                        <img src="fotinha.jpeg" alt="amor eu te amo">
+                        <p>EU</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="euiele.jpeg" alt="voce é minha vida">
+                        <p>TE</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="euamoele.jpeg" alt="meu macaquinho lindo">
+                        <p>AMO 😄</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>FEITO COM MUITO AMOR PARA: SIXX ❤️ </p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const hiddenContent = document.getElementById('hiddenContent');
+        let isContentVisible = false;
+
+        toggleButton.addEventListener('click', () => {
+            if (isContentVisible) {
+                hiddenContent.style.display = 'none';
+                toggleButton.textContent = 'abrir surpresinha';
+            } else {
+                hiddenContent.style.display = 'block';
+                toggleButton.textContent = 'fechar surpresinha rs';
+            }
+            isContentVisible = !isContentVisible;
+        });
+    </script>
+</body>
+</html>
