@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #3b3b3b, #6d6c6c);
+    color: #8a8a8a;
+    text-align: center;
+    overflow-y: auto; /* Permite rolar a página */
+    height: 100vh;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+.header {
+    background-color: #b1b1b1;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.interactive-section {
+    margin: 30px auto;
+    padding: 20px;
+    background: #202020;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-section p {
+    font-size: 1.2em;
+}
+
+.interactive-section button {
+    margin-top: 10px;
+    background: #555555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.interactive-section button:hover {
+    background: #b4b4b4;
+    transform: scale(1.1);
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.heart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.heart-container.open {
+    transform: scale(1);
+}
+
+/* Coração grande com texto dentro */
+.large-heart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(97, 97, 97);
+    clip-path: polygon(50% 0%, 100% 35%, 90% 100%, 50% 80%, 10% 100%, 0% 35%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    transform-origin: center;
+}
+
+.large-heart:hover {
+    transform: scale(1.1); /* Animação de escala */
+}
+
+.heart-inner {
+    text-align: center;
+    font-size: 1.2em;
+    color: #4d4849;
+}
+
+.heart p {
+    margin: 0;
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ffffff;
+    background: #a1a1a1;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Corações flutuando (ajustado para a parte inferior) */
+.floating-hearts {
+    position: fixed;
+    bottom: 0; /* Agora estão na parte inferior */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-hearts .heart {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: pink;
+    transform: rotate(45deg);
+    animation: float 6s infinite;
+}
+
+.floating-hearts .heart:before,
+.floating-hearts .heart:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: pink;
+    border-radius: 50%;
+}
+
+.floating-hearts .heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.floating-hearts .heart:after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50px) rotate(45deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.floating-hearts .heart:nth-child(1) {
+    left: 20%;
+    animation-duration: 4s;
+}
+
+.floating-hearts .heart:nth-child(2) {
+    left: 40%;
+    animation-duration: 5s;
+}
+
+.floating-hearts .heart:nth-child(3) {
+    left: 60%;
+    animation-duration: 3s;
+}
+
+.floating-hearts .heart:nth-child(4) {
+    left: 80%;
+    animation-duration: 6s;
+}
+
+.floating-hearts .heart:nth-child(5) {
+    left: 50%;
+    animation-duration: 7s;
+}
